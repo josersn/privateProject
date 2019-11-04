@@ -7,7 +7,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title><?= NAME?></title>
     <link rel="stylesheet" href="<?php echo INCLUDE_PATH?>style/style.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/d234afb51c.js" crossorigin="anonymous"></script>
@@ -20,9 +20,9 @@
         </div>
         <nav class="nav">
             <ul>
-                <li>Blog</li>
-                <li>Mapa Astral</li>
-                <li>Login</li>
+                <li class="link"><a href="#">Blog</a></li>
+                <li class="link"><a href="#">Mapa Astral</a></li>
+                <li class="login"><a href="#">Login</a></li>
             </ul>
         </nav>
     </header>
