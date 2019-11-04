@@ -1,0 +1,38 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+header {
+  max-width: 1269px;
+  margin: 0 auto;
+  font-family: "Poppins", sans-serif;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+}
+.logo {
+  display: flex;
+  align-items: center;
+}
+.logo h1 {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.logo i {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin: 0 0.4rem;
+}
+.nav ul {
+  display: flex;
+  margin-top: 3px;
+  list-style: none;
+}
+.nav ul li {
+  padding: 1rem 2rem;
+  font-size: 16pt;
+  text-transform: uppercase;
+  color: #574973;
+}
