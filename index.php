@@ -13,19 +13,43 @@
     <script src="https://kit.fontawesome.com/d234afb51c.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <header>
+    <header class="menu-top">
         <div class="logo">
             <i class="far fa-moon fa-2x"></i>
-            <h1>Astrale</h1>
+            <h1><a href="home">Astrale</a></h1>
         </div>
+        <div class="menu-toggle"></div>
         <nav class="nav">
             <ul>
-                <li class="link"><a href="#">Blog</a></li>
-                <li class="link"><a href="#">Mapa Astral</a></li>
+                <li class="link"><a href="blog">Blog</a></li>
+                <li class="link"><a href="mapa">Mapa Astral</a></li>
                 <li class="login"><a href="#">Login</a></li>
             </ul>
         </nav>
     </header>
+    <?php 
+        //pegando a url
+        $url = isset($_GET['url']) ? $_GET['url'] : 'home';
+        if(file_exists("pages/".$url.".php")){
+            //include nela
+            include("pages/".$url.".php");
+        }else{
+            //tratamento de rotas
+            include("pages/404.php");
+        }
+    ?>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="script/script.js"></script>
+    <script >
+        var curSLide = 1;
+        var $slides = $('.slides');
+        var slideCount = $slides.children().length;
+
+            setInterval(() => {
+                $slides.animate({
+                    marginLeft: "-900px";
+                }, 800);
+            }, 1000);
+    </script>
 </body>
 </html>

@@ -5,13 +5,15 @@
 a {
   text-decoration: none;
 }
-header {
+header.menu-top {
   max-width: 1269px;
+  height: 10vh;
   margin: 5px auto;
   font-family: "Poppins", sans-serif;
-  padding: 0 20px;
+  padding: 4px 20px;
   display: flex;
   justify-content: space-between;
+  position: relative;
 }
 .logo {
   display: flex;
@@ -37,12 +39,15 @@ header {
   padding: 0.5rem 2rem;
   font-size: 16pt;
   text-transform: uppercase;
+  margin: 0 5px;
 }
 .link {
+  display: block;
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
 .login {
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   box-shadow: 0px 2px 6px 2px #cecece;
@@ -50,4 +55,103 @@ header {
 }
 .login a {
   color: #fff;
+}
+.login:hover {
+  border: thin solid #667eea;
+  background: #fff;
+}
+.login a:hover {
+  color: #667eea;
+}
+.link:hover {
+  background: #667eea;
+  color: #fff;
+}
+.link a:hover * {
+  color: #fff;
+}
+/* home  */
+.slider {
+  width: 1269px;
+  height: 80vh;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.slides {
+  display: block;
+  width: 8000px;
+  height: 400px;
+  list-style: none;
+}
+.slide {
+  float: left;
+  height: 400px;
+  width: 1269px;
+}
+/* 404.php */
+.notFound {
+  margin: 0 auto;
+  max-width: 600px;
+  margin-top: 40px;
+  font-family: "Poppins", sans-serif;
+}
+.notFound i {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.notFound h2 {
+  font-size: 32px;
+  color: #764ba2;
+}
+.notFound h3 {
+  font-size: 24px;
+  color: #667eea;
+}
+@media (max-width: 1200px) {
+  header.menu-top {
+    margin: 4px 20px;
+  }
+}
+
+/* medias queries */
+@media (max-width: 768px) {
+  header.menu-top {
+    flex-wrap: wrap;
+  }
+  .menu-toggle {
+    display: block;
+    width: 40px;
+    height: 40px;
+    margin: 10px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    float: left;
+    cursor: pointer;
+    text-align: center;
+    font-size: 30px;
+  }
+  .menu-toggle:before {
+    content: "\f0c9";
+    font-family: fontAwesome;
+    line-height: 40px;
+  }
+  .menu-toggle.active:before {
+    content: "\f00d";
+    font-family: fontAwesome;
+    line-height: 40px;
+  }
+  nav {
+    display: none;
+  }
+  nav.active {
+    display: block;
+    width: 100%;
+    box-shadow: 2px 2px 6px 2px #cecece;
+  }
+  nav.active ul {
+    display: block;
+    text-align: center;
+  }
 }
