@@ -1,5 +1,8 @@
 <?php
     include_once('config/variables.php');
+    session_start();
+    $url = isset($_GET['url']) ? $_GET['url'] : 'home';
+
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -19,20 +22,37 @@
             <h1><a href="home">Astrale</a></h1>
         </div>
         <div class="menu-toggle"></div>
-        <nav class="nav">
+        <?php 
+            if($url == 'home'){ 
+                
+                ?>
+                <nav class="nav">
+                    <ul>
+                        <li class="link"><a href="blog">Blog</a></li>
+                        <li class="link"><a href="mapa">Mapa Astral</a></li>
+                        <li class="login"><a href="#">Login</a></li>
+                    </ul>
+                </nav>
+                <?php
+            }else {
+                ?>
+                <nav class="nav">
             <ul>
                 <li class="link"><a href="blog">Blog</a></li>
                 <li class="link"><a href="mapa">Mapa Astral</a></li>
-                <li class="login"><a href="#">Login</a></li>
+                <li class="login"><a href="#">José Ramos</a></li>
             </ul>
         </nav>
+                <?php
+            }
+        ?>
+        
     </header>
     <?php 
         //pegando a url
-        $url = isset($_GET['url']) ? $_GET['url'] : 'home';
         if(file_exists("pages/".$url.".php")){
             //include nela
-            include("pages/".$url.".php");
+            // include("pages/".$url.".php");
         }else{
             //tratamento de rotas
             include("pages/404.php");
@@ -41,15 +61,6 @@
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="script/script.js"></script>
     <script >
-        var curSLide = 1;
-        var $slides = $('.slides');
-        var slideCount = $slides.children().length;
-
-            setInterval(() => {
-                $slides.animate({
-                    marginLeft: "-900px";
-                }, 800);
-            }, 1000);
-    </script>
+            </script>
 </body>
 </html>

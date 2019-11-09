@@ -5,6 +5,9 @@
 a {
   text-decoration: none;
 }
+main {
+  z-index: 1;
+}
 header.menu-top {
   max-width: 1269px;
   height: 10vh;
@@ -14,6 +17,7 @@ header.menu-top {
   display: flex;
   justify-content: space-between;
   position: relative;
+  box-shadow: 1px 1px 1px 1px#cecece;
 }
 .logo {
   display: flex;
@@ -32,7 +36,7 @@ header.menu-top {
 }
 .nav ul {
   display: flex;
-  margin-top: 3px;
+  margin-top: 10px;
   list-style: none;
 }
 .nav ul li {
@@ -58,24 +62,29 @@ header.menu-top {
 }
 .login:hover {
   border: thin solid #667eea;
-  background: #fff;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 .login a:hover {
-  color: #667eea;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 .link:hover {
   background: #667eea;
-  color: #fff;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 .link a:hover * {
-  color: #fff;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 /* home  */
 .slider {
-  width: 1269px;
+  width: 100%;
   height: 80vh;
   margin: 0 auto;
   overflow: hidden;
+  z-index: 1;
 }
 .slides {
   display: block;
@@ -144,11 +153,13 @@ header.menu-top {
   }
   nav {
     display: none;
+    z-index: 2;
   }
   nav.active {
     display: block;
     width: 100%;
     box-shadow: 2px 2px 6px 2px #cecece;
+    z-index: 2;
   }
   nav.active ul {
     display: block;
