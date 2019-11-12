@@ -40,7 +40,9 @@
             <ul>
                 <li class="link"><a href="blog">Blog</a></li>
                 <li class="link"><a href="mapa">Mapa Astral</a></li>
-                <li class="login"><a href="#">José Ramos</a></li>
+                <li class="link"><a href="conexoes">Conexões</a></li>
+                <li class="link"><a href="mensagens">Mensagens</a></li>
+                <li class="login"><a href="meuPerfil.php">José Ramos</a></li>
             </ul>
         </nav>
                 <?php
@@ -52,7 +54,7 @@
         //pegando a url
         if(file_exists("pages/".$url.".php")){
             //include nela
-            // include("pages/".$url.".php");
+            include("pages/".$url.".php");
         }else{
             //tratamento de rotas
             include("pages/404.php");

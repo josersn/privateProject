@@ -1,6 +1,7 @@
 * {
   margin: 0;
   padding: 0;
+  font-family: "Poppins", sans-serif;
 }
 a {
   text-decoration: none;
@@ -10,7 +11,7 @@ main {
 }
 header.menu-top {
   max-width: 1269px;
-  height: 10vh;
+  height: 7.5vh;
   margin: 5px auto;
   font-family: "Poppins", sans-serif;
   padding: 4px 20px;
@@ -36,14 +37,13 @@ header.menu-top {
 }
 .nav ul {
   display: flex;
-  margin-top: 10px;
+  margin-top: 5px;
   list-style: none;
 }
 .nav ul li {
   padding: 0.5rem 2rem;
   font-size: 16pt;
   text-transform: uppercase;
-  margin: 0 5px;
 }
 .link {
   display: block;
@@ -165,4 +165,71 @@ header.menu-top {
     display: block;
     text-align: center;
   }
+}
+/* conexoes  */
+
+.conexoes {
+  width: 100%;
+  height: 90vh;
+  overflow: hidden;
+}
+.aside-conexoes {
+  width: 30%;
+  height: 100%;
+  overflow-y: scroll;
+}
+.aside-title {
+  height: 10vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-size: 22pt;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+.aside-body {
+  height: 100%;
+}
+.card {
+  width: 99%;
+  height: 30%;
+  margin: 5px 0;
+  box-shadow: 2px 2px 4px 2px #cecece;
+  display: flex;
+  flex-direction: column;
+}
+.card-title {
+  display: flex;
+  width: 90%;
+  justify-content: space-between;
+  padding: 0.4rem 1rem;
+}
+.card-title > h2 {
+  font-size: 16pt;
+}
+.card-title > span {
+  font-size: 16pt;
+  font-weight: 300;
+}
+.card-body {
+  display: flex;
+}
+
+.card-body img {
+  width: 30%;
+  border-radius: 12px;
+  margin-left: 1rem;
+  transition: all 0.4s ease-in-out;
+}
+.card-body img:hover {
+  width: 50%;
+  z-index: 2;
+}
+.card-body > h3 {
+  display: block;
+  z-index: 1;
+  font-size: 14pt;
+  font-weight: 300;
+  margin-left: 0.4rem;
 }
