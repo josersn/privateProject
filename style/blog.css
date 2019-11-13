@@ -26,8 +26,8 @@ header.menu-top {
 }
 .posts {
   width: 100%;
-  display: flex;
-  justify-content: center;
+  /* display: flex; */
+  /* justify-content: center; */
 }
 .logo h1 {
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
@@ -83,6 +83,9 @@ header.menu-top {
   -webkit-text-fill-color: transparent;
 }
 @media (max-width: 768px) {
+  .home {
+    font-size: 28px;
+  }
   .aside-conexoes {
     width: 100%;
   }
@@ -92,8 +95,14 @@ header.menu-top {
   }
   .banner {
     width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   .banner-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin-top: 0;
     margin-left: 0;
   }

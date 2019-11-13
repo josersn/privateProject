@@ -11,8 +11,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title><?= NAME?></title>
-    <?php if($url != "blog"){?>
-    <link rel="stylesheet" href="<?php echo INCLUDE_PATH?>style/style.css">
+    <?php if($url != "blog" || $url != "home"){?>
+    <link rel="stylesheet" href="style/style.css">
     <?php }else {?>
     <link rel="stylesheet" href="<?php echo INCLUDE_PATH?>style/blog.css">
 

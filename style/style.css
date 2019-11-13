@@ -188,6 +188,7 @@ header.menu-top {
 .banner-body {
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 .banner-body > h2 {
   color: #fff;
